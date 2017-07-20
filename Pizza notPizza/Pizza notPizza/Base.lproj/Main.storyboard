@@ -6,14 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="dSh-Yn-gIJ">
             <objects>
-                <viewController id="GoM-bD-XfT" customClass="ViewController" customModule="Pizza_notPizza" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GoM-bD-XfT" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xFQ-V6-tve"/>
                         <viewControllerLayoutGuide type="bottom" id="gyP-CD-Okz"/>
@@ -21,102 +20,12 @@
                     <view key="view" contentMode="scaleToFill" id="3pp-Ue-vFp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza not Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfR-0L-vU9">
-                                <rect key="frame" x="81.5" y="40" width="212" height="38"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="xBb-wt-38J">
-                                <rect key="frame" x="70" y="541.5" width="235" height="110.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r0u-2D-p7H">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="110.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtn-JE-jiT">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="O2X-AG-iPT"/>
-                                                    <constraint firstAttribute="width" constant="90" id="R5B-b5-Tm6"/>
-                                                </constraints>
-                                                <state key="normal" title="CameraButton" image="Camera-Button-Icon"/>
-                                                <connections>
-                                                    <action selector="cameraTapped:" destination="GoM-bD-XfT" eventType="touchUpInside" id="zUF-Gz-nCs"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewl-QT-Utj">
-                                                <rect key="frame" x="0.0" y="90" width="90" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-RO-paW">
-                                        <rect key="frame" x="155" y="8" width="80" height="102.5"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4O-bm-txu">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="Odm-aZ-TRA"/>
-                                                    <constraint firstAttribute="width" constant="80" id="nCX-eL-24c"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Photos-Button-Icon"/>
-                                                <connections>
-                                                    <action selector="photosTapped:" destination="GoM-bD-XfT" eventType="touchUpInside" id="MzO-bd-rEI"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sz-eE-SsM">
-                                                <rect key="frame" x="13" y="82" width="54" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s6v-fN-TAI">
-                                <rect key="frame" x="20" y="88" width="335" height="335"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="335" id="NBg-5E-Dg8"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcM-au-PWP">
-                                <rect key="frame" x="20" y="463" width="336" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="gyP-CD-Okz" firstAttribute="top" secondItem="xBb-wt-38J" secondAttribute="bottom" constant="15" id="9aR-Lc-q2x"/>
-                            <constraint firstItem="s6v-fN-TAI" firstAttribute="leading" secondItem="3pp-Ue-vFp" secondAttribute="leadingMargin" constant="4" id="BA9-QL-NoJ"/>
-                            <constraint firstItem="rfR-0L-vU9" firstAttribute="top" secondItem="xFQ-V6-tve" secondAttribute="bottom" constant="20" id="IUy-1W-1md"/>
-                            <constraint firstItem="BcM-au-PWP" firstAttribute="centerX" secondItem="3pp-Ue-vFp" secondAttribute="centerX" id="RIk-OB-EdR"/>
-                            <constraint firstItem="BcM-au-PWP" firstAttribute="centerX" secondItem="3pp-Ue-vFp" secondAttribute="centerX" id="XD9-jC-LbE"/>
-                            <constraint firstItem="BcM-au-PWP" firstAttribute="top" secondItem="s6v-fN-TAI" secondAttribute="bottom" constant="40" id="gvw-6T-9ZQ"/>
-                            <constraint firstItem="xBb-wt-38J" firstAttribute="centerX" secondItem="3pp-Ue-vFp" secondAttribute="centerX" id="len-Qe-Y24"/>
-                            <constraint firstItem="s6v-fN-TAI" firstAttribute="centerX" secondItem="3pp-Ue-vFp" secondAttribute="centerX" id="oP8-hp-T9K"/>
-                            <constraint firstItem="s6v-fN-TAI" firstAttribute="leading" secondItem="BcM-au-PWP" secondAttribute="leading" id="okj-hO-2iM"/>
-                            <constraint firstItem="rfR-0L-vU9" firstAttribute="centerX" secondItem="xBb-wt-38J" secondAttribute="centerX" id="wpW-Bt-Igc"/>
-                            <constraint firstItem="s6v-fN-TAI" firstAttribute="top" secondItem="rfR-0L-vU9" secondAttribute="bottom" constant="10" id="zQD-BR-6cp"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="s6v-fN-TAI" id="xkA-r2-4cQ"/>
-                        <outlet property="resultLabel" destination="BcM-au-PWP" id="W6K-7J-Fc5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTc-D4-e4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63.200000000000003" y="230.73463268365819"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Camera-Button-Icon" width="170" height="170"/>
-        <image name="Photos-Button-Icon" width="170" height="170"/>
-    </resources>
 </document>
