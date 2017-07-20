@@ -79,7 +79,7 @@ class ViewController: UIViewController {
                         var result = false
                         
                         for concept in caiOutput.concepts{
-                            if concept.conceptName == "pizza" && concept.score >= 0.9 {
+                            if concept.conceptName == "pizza" && concept.score >= 0.8 {
                                 result = true
                             }
                         }
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                             if result == true {
                                 self.resultLabel.text = "PIZZAAAAAAA"
                             } else {
-                                self.resultLabel.text = "Not a pizza."
+                                self.resultLabel.text = "Not a pizza"
                             }
                         }
                         
