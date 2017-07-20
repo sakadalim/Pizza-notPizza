@@ -7,7 +7,5 @@ target 'Pizza notPizza' do
 
   # Pods for Pizza notPizza
   pod 'Clarifai'
-  pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON.git'
-
 
 end

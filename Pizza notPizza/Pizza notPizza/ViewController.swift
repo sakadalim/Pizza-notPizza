@@ -59,8 +59,9 @@ class ViewController: UIViewController {
         if let app = app {
             
             // Fetch Clarifai's general model.
-            app.getModelByID("bd367be194cf45149e75f01d59f77ba7", completion: { (model, error) in
-                
+//            app.getModelByID("bd367be194cf45149e75f01d59f77ba7", completion: { (model, error) in
+                app.getModelByID("aaa03c23b3724a16a56b629203edc62c", completion: { (model, error) in
+
                 // Create a Clarifai image from a uiimage.
                 let caiImage = ClarifaiImage(image: image)!
                 
@@ -76,8 +77,9 @@ class ViewController: UIViewController {
                     
                     if let caiOutput = caiOuputs.first {
                         var result = false
+                        
                         for concept in caiOutput.concepts{
-                            if concept.conceptName == "pizza" && concept.score >= 0.85 {
+                            if concept.conceptName == "pizza" && concept.score >= 0.9 {
                                 result = true
                             }
                         }
