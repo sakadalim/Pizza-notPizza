@@ -109,7 +109,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         self.imageView.image = chosenImage
         recognizeImage(image: chosenImage)
-        resultLabel.text = "Analizing..."
+        resultLabel.text = "Analyzing..."
         dismiss(animated: true, completion: nil)
         
     }
