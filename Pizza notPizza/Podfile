@@ -7,5 +7,6 @@ target 'Pizza notPizza' do
 
   # Pods for Pizza notPizza
   pod 'Clarifai'
+  pod 'SwiftyCam'
 
 end
