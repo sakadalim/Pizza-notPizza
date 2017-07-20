@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="iSs-Td-la7">
             <objects>
-                <viewController id="Zwx-JK-mFa" customClass="ViewController" customModule="Pizza_notPizza" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zwx-JK-mFa" customClass="MainViewController" customModule="Pizza_notPizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y5e-Vh-bpU"/>
                         <viewControllerLayoutGuide type="bottom" id="PPR-rF-6LS"/>
