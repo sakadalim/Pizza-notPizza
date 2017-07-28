@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var MMPizza: UIImageView!
+    
+    @IBOutlet weak var mainTitle: UILabel!
+    
     let picker = UIImagePickerController()
 
     var app:ClarifaiApp?
@@ -26,6 +30,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         picker.delegate = self
         app = ClarifaiApp(apiKey: "bdb50c049f0646eeaf05bf744570a452")
+        imageView.layer.cornerRadius = 20
+        imageView.layer.borderWidth = 2
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.clipsToBounds = true
+        imageView.contentMode = UIViewContentMode.scaleToFill
+        imageView.isHighlighted = true
+        
+        
+
+        mainTitle.layer.cornerRadius = 7
+        mainTitle.clipsToBounds = true
+        
+        resultLabel.layer.cornerRadius = 10
+        resultLabel.clipsToBounds = true
+
         
     }
 
@@ -77,17 +96,18 @@ class ViewController: UIViewController {
                     
                     if let caiOutput = caiOuputs.first {
                         var result = false
-                        
+                        let firstTag = caiOutput.concepts[0].conceptName!
                         for concept in caiOutput.concepts{
                             if concept.conceptName == "pizza" && concept.score >= 0.8 {
                                 result = true
                             }
                         }
                         DispatchQueue.main.async {
+                            self.resultLabel.layer.backgroundColor = UIColor.white.cgColor
                             if result == true {
                                 self.resultLabel.text = "PIZZAAAAAAA"
                             } else {
-                                self.resultLabel.text = "Not a pizza"
+                                self.resultLabel.text = "That is not a pizza! \n That is a picture of \(firstTag)!"
                             }
                         }
                         
@@ -107,8 +127,11 @@ class ViewController: UIViewController {
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        self.imageView.isHighlighted = false
+        self.imageView.contentMode = UIViewContentMode.scaleAspectFill
         self.imageView.image = chosenImage
         recognizeImage(image: chosenImage)
+        self.resultLabel.layer.backgroundColor = UIColor.white.cgColor
         resultLabel.text = "Analyzing..."
         dismiss(animated: true, completion: nil)
         
@@ -116,6 +139,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+        
     }
 }
 
